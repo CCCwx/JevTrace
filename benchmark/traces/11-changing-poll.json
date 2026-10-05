@@ -1,0 +1,76 @@
+{
+  "trace_id": "11-changing-poll",
+  "goal": "Fix checkout.ts and satisfy the explicitly listed requirements.",
+  "metadata": {
+    "synthetic": true,
+    "scenario": "Polling until deployment becomes ready"
+  },
+  "requirements": [
+    {
+      "id": "tests",
+      "description": "Checkout tests must pass.",
+      "depends_on": [
+        "checkout.ts"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "type": "tool_call",
+      "tool": "deployment_status",
+      "input": {
+        "id": "deployment-1"
+      },
+      "output": {
+        "state": "pending"
+      },
+      "status": "success",
+      "failure_kind": "unknown",
+      "intent": "poll",
+      "reads": [],
+      "writes": [],
+      "state_changed": false,
+      "checks": [],
+      "outcome": "unknown"
+    },
+    {
+      "id": 2,
+      "type": "tool_call",
+      "tool": "deployment_status",
+      "input": {
+        "id": "deployment-1"
+      },
+      "output": {
+        "state": "pending"
+      },
+      "status": "success",
+      "failure_kind": "unknown",
+      "intent": "poll",
+      "reads": [],
+      "writes": [],
+      "state_changed": false,
+      "checks": [],
+      "outcome": "unknown"
+    },
+    {
+      "id": 3,
+      "type": "tool_call",
+      "tool": "deployment_status",
+      "input": {
+        "id": "deployment-1"
+      },
+      "output": {
+        "state": "ready"
+      },
+      "status": "success",
+      "failure_kind": "unknown",
+      "intent": "poll",
+      "reads": [],
+      "writes": [],
+      "state_changed": false,
+      "checks": [],
+      "outcome": "unknown"
+    }
+  ]
+}

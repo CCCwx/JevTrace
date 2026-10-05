@@ -1,0 +1,145 @@
+{
+  "trace_id": "04-alternating-loop",
+  "goal": "Fix checkout.ts and satisfy the explicitly listed requirements.",
+  "metadata": {
+    "synthetic": true,
+    "scenario": "A/B reads repeat three times"
+  },
+  "requirements": [
+    {
+      "id": "tests",
+      "description": "Checkout tests must pass.",
+      "depends_on": [
+        "checkout.ts"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "type": "tool_call",
+      "tool": "read_file",
+      "input": {
+        "path": "a.ts"
+      },
+      "output": {
+        "content": "a.ts:v1"
+      },
+      "status": "success",
+      "failure_kind": "unknown",
+      "intent": "work",
+      "reads": [
+        "a.ts"
+      ],
+      "writes": [],
+      "state_changed": false,
+      "checks": [],
+      "outcome": "unknown"
+    },
+    {
+      "id": 2,
+      "type": "tool_call",
+      "tool": "read_file",
+      "input": {
+        "path": "b.ts"
+      },
+      "output": {
+        "content": "b.ts:v1"
+      },
+      "status": "success",
+      "failure_kind": "unknown",
+      "intent": "work",
+      "reads": [
+        "b.ts"
+      ],
+      "writes": [],
+      "state_changed": false,
+      "checks": [],
+      "outcome": "unknown"
+    },
+    {
+      "id": 3,
+      "type": "tool_call",
+      "tool": "read_file",
+      "input": {
+        "path": "a.ts"
+      },
+      "output": {
+        "content": "a.ts:v1"
+      },
+      "status": "success",
+      "failure_kind": "unknown",
+      "intent": "work",
+      "reads": [
+        "a.ts"
+      ],
+      "writes": [],
+      "state_changed": false,
+      "checks": [],
+      "outcome": "unknown"
+    },
+    {
+      "id": 4,
+      "type": "tool_call",
+      "tool": "read_file",
+      "input": {
+        "path": "b.ts"
+      },
+      "output": {
+        "content": "b.ts:v1"
+      },
+      "status": "success",
+      "failure_kind": "unknown",
+      "intent": "work",
+      "reads": [
+        "b.ts"
+      ],
+      "writes": [],
+      "state_changed": false,
+      "checks": [],
+      "outcome": "unknown"
+    },
+    {
+      "id": 5,
+      "type": "tool_call",
+      "tool": "read_file",
+      "input": {
+        "path": "a.ts"
+      },
+      "output": {
+        "content": "a.ts:v1"
+      },
+      "status": "success",
+      "failure_kind": "unknown",
+      "intent": "work",
+      "reads": [
+        "a.ts"
+      ],
+      "writes": [],
+      "state_changed": false,
+      "checks": [],
+      "outcome": "unknown"
+    },
+    {
+      "id": 6,
+      "type": "tool_call",
+      "tool": "read_file",
+      "input": {
+        "path": "b.ts"
+      },
+      "output": {
+        "content": "b.ts:v1"
+      },
+      "status": "success",
+      "failure_kind": "unknown",
+      "intent": "work",
+      "reads": [
+        "b.ts"
+      ],
+      "writes": [],
+      "state_changed": false,
+      "checks": [],
+      "outcome": "unknown"
+    }
+  ]
+}

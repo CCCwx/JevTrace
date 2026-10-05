@@ -1,0 +1,82 @@
+{
+  "trace_id": "17-intentional-verification",
+  "goal": "Fix checkout.ts and satisfy the explicitly listed requirements.",
+  "metadata": {
+    "synthetic": true,
+    "scenario": "Explicit repeated verification is legitimate"
+  },
+  "requirements": [
+    {
+      "id": "tests",
+      "description": "Checkout tests must pass.",
+      "depends_on": [
+        "checkout.ts"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "type": "tool_call",
+      "tool": "read_file",
+      "input": {
+        "path": "checkout.ts"
+      },
+      "output": {
+        "content": "checkout.ts:v1"
+      },
+      "status": "success",
+      "failure_kind": "unknown",
+      "intent": "verify",
+      "reads": [
+        "checkout.ts"
+      ],
+      "writes": [],
+      "state_changed": false,
+      "checks": [],
+      "outcome": "unknown"
+    },
+    {
+      "id": 2,
+      "type": "tool_call",
+      "tool": "read_file",
+      "input": {
+        "path": "checkout.ts"
+      },
+      "output": {
+        "content": "checkout.ts:v1"
+      },
+      "status": "success",
+      "failure_kind": "unknown",
+      "intent": "verify",
+      "reads": [
+        "checkout.ts"
+      ],
+      "writes": [],
+      "state_changed": false,
+      "checks": [],
+      "outcome": "unknown"
+    },
+    {
+      "id": 3,
+      "type": "tool_call",
+      "tool": "read_file",
+      "input": {
+        "path": "checkout.ts"
+      },
+      "output": {
+        "content": "checkout.ts:v1"
+      },
+      "status": "success",
+      "failure_kind": "unknown",
+      "intent": "verify",
+      "reads": [
+        "checkout.ts"
+      ],
+      "writes": [],
+      "state_changed": false,
+      "checks": [],
+      "outcome": "unknown"
+    }
+  ]
+}

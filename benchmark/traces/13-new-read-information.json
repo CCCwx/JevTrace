@@ -1,0 +1,61 @@
+{
+  "trace_id": "13-new-read-information",
+  "goal": "Fix checkout.ts and satisfy the explicitly listed requirements.",
+  "metadata": {
+    "synthetic": true,
+    "scenario": "External content changed between reads"
+  },
+  "requirements": [
+    {
+      "id": "tests",
+      "description": "Checkout tests must pass.",
+      "depends_on": [
+        "checkout.ts"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "type": "tool_call",
+      "tool": "read_file",
+      "input": {
+        "path": "checkout.ts"
+      },
+      "output": {
+        "content": "checkout.ts:v1"
+      },
+      "status": "success",
+      "failure_kind": "unknown",
+      "intent": "work",
+      "reads": [
+        "checkout.ts"
+      ],
+      "writes": [],
+      "state_changed": false,
+      "checks": [],
+      "outcome": "unknown"
+    },
+    {
+      "id": 2,
+      "type": "tool_call",
+      "tool": "read_file",
+      "input": {
+        "path": "checkout.ts"
+      },
+      "output": {
+        "content": "checkout.ts:v2"
+      },
+      "status": "success",
+      "failure_kind": "unknown",
+      "intent": "work",
+      "reads": [
+        "checkout.ts"
+      ],
+      "writes": [],
+      "state_changed": true,
+      "checks": [],
+      "outcome": "unknown"
+    }
+  ]
+}

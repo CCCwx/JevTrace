@@ -1,0 +1,56 @@
+{
+  "trace_id": "14-missing-evidence",
+  "goal": "Fix checkout.ts and satisfy the explicitly listed requirements.",
+  "metadata": {
+    "synthetic": true,
+    "scenario": "Missing checks do not prove unsuccessful completion"
+  },
+  "requirements": [
+    {
+      "id": "tests",
+      "description": "Checkout tests must pass.",
+      "depends_on": [
+        "checkout.ts"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "type": "tool_call",
+      "tool": "read_file",
+      "input": {
+        "path": "checkout.ts"
+      },
+      "output": {
+        "content": "checkout.ts:v1"
+      },
+      "status": "success",
+      "failure_kind": "unknown",
+      "intent": "work",
+      "reads": [
+        "checkout.ts"
+      ],
+      "writes": [],
+      "state_changed": false,
+      "checks": [],
+      "outcome": "unknown"
+    },
+    {
+      "id": 2,
+      "type": "finish",
+      "input": {},
+      "output": {
+        "message": "Unable to finish; tests still fail."
+      },
+      "status": "unknown",
+      "failure_kind": "unknown",
+      "intent": "work",
+      "reads": [],
+      "writes": [],
+      "state_changed": false,
+      "checks": [],
+      "outcome": "unknown"
+    }
+  ]
+}

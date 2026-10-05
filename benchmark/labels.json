@@ -1,0 +1,423 @@
+{
+  "provenance": "20 hand-authored synthetic coding-agent scenarios with developer-authored reference labels. Not independent human annotation or a held-out real-world benchmark.",
+  "traces": {
+    "01-clean-fix": {
+      "1": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "2": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "3": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "4": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      }
+    },
+    "02-duplicate-read": {
+      "1": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "2": {
+        "redundant": true,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      }
+    },
+    "03-triple-read": {
+      "1": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "2": {
+        "redundant": true,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "3": {
+        "redundant": true,
+        "bad_retry": false,
+        "loop": true,
+        "premature_finish": false
+      }
+    },
+    "04-alternating-loop": {
+      "1": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "2": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "3": {
+        "redundant": true,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "4": {
+        "redundant": true,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "5": {
+        "redundant": true,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "6": {
+        "redundant": true,
+        "bad_retry": false,
+        "loop": true,
+        "premature_finish": false
+      }
+    },
+    "05-persistent-retry": {
+      "1": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "2": {
+        "redundant": false,
+        "bad_retry": true,
+        "loop": false,
+        "premature_finish": false
+      },
+      "3": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      }
+    },
+    "06-transient-retry": {
+      "1": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "2": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "3": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      }
+    },
+    "07-retry-after-fix": {
+      "1": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "2": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "3": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "4": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      }
+    },
+    "08-premature-success": {
+      "1": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "2": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": true
+      }
+    },
+    "09-resolved-failure": {
+      "1": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "2": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "3": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "4": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      }
+    },
+    "10-stable-poll": {
+      "1": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "2": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "3": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      }
+    },
+    "11-changing-poll": {
+      "1": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "2": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "3": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      }
+    },
+    "12-reread-after-edit": {
+      "1": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "2": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "3": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      }
+    },
+    "13-new-read-information": {
+      "1": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "2": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      }
+    },
+    "14-missing-evidence": {
+      "1": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "2": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      }
+    },
+    "15-honest-blocked": {
+      "1": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "2": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      }
+    },
+    "16-partial-requirements": {
+      "1": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "2": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "3": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": true
+      }
+    },
+    "17-intentional-verification": {
+      "1": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "2": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "3": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      }
+    },
+    "18-semantic-persistent-retry": {
+      "1": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "2": {
+        "redundant": false,
+        "bad_retry": true,
+        "loop": false,
+        "premature_finish": false
+      },
+      "3": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      }
+    },
+    "19-transient-backoff": {
+      "1": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "2": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "3": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "4": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      }
+    },
+    "20-failed-test-loop": {
+      "1": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      },
+      "2": {
+        "redundant": false,
+        "bad_retry": true,
+        "loop": false,
+        "premature_finish": false
+      },
+      "3": {
+        "redundant": false,
+        "bad_retry": true,
+        "loop": true,
+        "premature_finish": false
+      },
+      "4": {
+        "redundant": false,
+        "bad_retry": false,
+        "loop": false,
+        "premature_finish": false
+      }
+    }
+  }
+}

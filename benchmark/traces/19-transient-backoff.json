@@ -1,0 +1,98 @@
+{
+  "trace_id": "19-transient-backoff",
+  "goal": "Fix checkout.ts and satisfy the explicitly listed requirements.",
+  "metadata": {
+    "synthetic": true,
+    "scenario": "Repeated rate limit then recovery"
+  },
+  "requirements": [
+    {
+      "id": "tests",
+      "description": "Checkout tests must pass.",
+      "depends_on": [
+        "checkout.ts"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "type": "tool_call",
+      "tool": "run_test",
+      "input": {
+        "command": "npm test"
+      },
+      "output": {
+        "message": "HTTP 429; retry after 1 second"
+      },
+      "status": "failure",
+      "failure_kind": "transient",
+      "intent": "work",
+      "reads": [],
+      "writes": [],
+      "state_changed": false,
+      "checks": [],
+      "outcome": "unknown"
+    },
+    {
+      "id": 2,
+      "type": "tool_call",
+      "tool": "run_test",
+      "input": {
+        "command": "npm test"
+      },
+      "output": {
+        "message": "HTTP 429; retry after 1 second"
+      },
+      "status": "failure",
+      "failure_kind": "transient",
+      "intent": "work",
+      "reads": [],
+      "writes": [],
+      "state_changed": false,
+      "checks": [],
+      "outcome": "unknown"
+    },
+    {
+      "id": 3,
+      "type": "tool_call",
+      "tool": "run_test",
+      "input": {
+        "command": "npm test"
+      },
+      "output": {
+        "exit_code": 0,
+        "message": "passed"
+      },
+      "status": "success",
+      "failure_kind": "unknown",
+      "intent": "work",
+      "reads": [],
+      "writes": [],
+      "state_changed": false,
+      "checks": [
+        {
+          "requirement_id": "tests",
+          "status": "passed"
+        }
+      ],
+      "outcome": "unknown"
+    },
+    {
+      "id": 4,
+      "type": "finish",
+      "input": {},
+      "output": {
+        "message": "Done; requirements satisfied."
+      },
+      "status": "unknown",
+      "failure_kind": "unknown",
+      "intent": "work",
+      "reads": [],
+      "writes": [],
+      "state_changed": false,
+      "checks": [],
+      "outcome": "success"
+    }
+  ]
+}
