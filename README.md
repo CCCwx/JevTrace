@@ -79,7 +79,6 @@ Recall cannot be established without real positive cases; precision is undefined
 
 GitHub Actions is configured to run type checks, builds, tests, and synthetic experiments on pushes and pull requests, without an API key. Local validation passed all 45 tests on Node.js 22; the workflow covers Node.js 20 and 22. Check its run results on GitHub after publication.
 
-The original [design proposal](JevTrace_README.md) describes planned features and illustrative numbers, not verified implementation results. Supporting experiment documents and the publication check record are currently in Chinese.
 
 ## License and publication review
 
