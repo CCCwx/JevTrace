@@ -1,6 +1,7 @@
 # JevTrace
 
 An offline prototype for inspecting coding agent traces. JevTrace flags redundant reads, unjustified retries, loops, and premature claims of completion. Rules mode runs locally; optional Jev mode uses the TypeSafe SDK for semantic judgments.
+<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/261ec986-ef48-4a7b-adcf-d9678e0c7681" />
 
 ## Quick start
 
