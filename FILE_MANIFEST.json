@@ -29,7 +29,7 @@
   "LICENSE": "c3195dc246a649fd23155e6518c3bb67cd9817087c741cc55dd7fb86398e2e27",
   "package-lock.json": "5f1be085d7a5787ea6dfc502cd0a990b24b6205aa9ae43b86ea6cf526579d0f9",
   "package.json": "a3b9cf7ed1a31f445f0b4229608eed347898f9d42aa7cd7e0f98d5463b5c6828",
-  "PUBLICATION_CHECK.md": "9e38f1d647b3062a1f3f8998fe2989f703bf4da428cb18481010ada5cf6dad61",
+  "PUBLICATION_CHECK.md": "7b44a69988ce3f1064cd4acbe65eff13d19e441b47a01a8fd0ade5e896029c5c",
   "README.md": "cc37a977f406a4bea13c75eae1f8ea1f70b54f40e4daceb0f1db670434ee42f2",
   "scripts/annotate-real-review.ts": "08934050b9d16a47d1f8e9fdbf0674ae5c0544f5f98db8ba03141c19619a8b30",
   "scripts/create-fixtures.ts": "420072249132d6355ab81431215a83b3464fc174829e654f23a5002e0f1997c4",
